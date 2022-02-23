@@ -1,4 +1,6 @@
-    1  java -version
+###reference link : https://techviewleo.com/install-elastic-stack-elk-on-amazon-linux/
+  yum install httpd #to get display of kibana UI
+  java -version
  sudo amazon-linux-extras install java-openjdk11
     2  cat <<EOF | sudo tee /etc/yum.repos.d/elasticsearch.repo
 [elasticsearch-7.x]
@@ -28,6 +30,6 @@ EOF
    17  sudo vim /etc/kibana/kibana.yml
    18  systemctl enable --now kibana
    19   systemctl status kibana
-   20  systemctl stop httpd
+   2
    21  history
    22  history > elk.txt
